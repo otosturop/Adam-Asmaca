@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "edu.mehmetarikan.adamasmaca"
+        versionCode = "10" 
+        version     = "1.0.0" >
+
+    <!-- Standart Uygulama Verileri -->
+
+    <name>BBY Asmaca</name>
+
+    <description>
+        Adamı asmayalım da besleyelim mi ? Bu minik uygulama BBY261 dersi 
+        için kodlanmıştır.
+    </description>
+
+    <author href="https://github.com/otosturop/" email="mehmetarikan.ma@gmail.com">
+        Mehmet Arıkan
+    </author>
+        
+    <!-- Derleme Platformu -->
+        
+    <gap:platform name="android" />
+        
+    <!-- Ek Özellikler -->
+
+    <preference name="orientation" value="portrait" /> <!-- Sadece dik çalışır -->
+    <preference name="fullscreen" value="false" /> <!-- Tam ekran çalışmaz (Saat barı gözükmez) -->
+        
+    <!-- İkon -->
+     
+    <icon src="icon.png" />
+        
+    <!-- Uygulama Hakları -->
+    
+    <preference name="permissions" value="none"/>
+        
+</widget>
