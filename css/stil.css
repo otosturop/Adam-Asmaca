@@ -1,0 +1,17 @@
+body{
+    background-color: azure;   
+}
+h2{
+    font-weight: bold;
+    font-family: monospace;
+}
+
+#bilmece{
+    font-weight: bold;
+    font-size: 35px;
+}
+
+#bak{
+	font-weight: bold;
+	font-size:30px;
+}

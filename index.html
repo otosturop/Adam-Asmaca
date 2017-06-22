@@ -1,29 +1,85 @@
+<!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8"/>
-<title>Adam Asmaca</title> 
-<style type="text/css">
-    body{margin: opx;font-family: "Courier New"; }
-#temel{width:1000px;margin:0px auto; padding-top: :20px; text-align: center }
-    #adam img {height:125px;margin-top: 25px;} 
-    #adam img{display: none;}
-    #harfler{font-size:20px;}
-    #bulmaca , #sonuc{margin-top:100px; letter-spacing: 10px; font-size: 36px; font-weight: bold; line-height: 50px; }
-</style>
-<script src="js/jquery-2.1.4.min.js" ></script> 
-<script src="javascript.js"> </script>   
-</head>    
-<body>
-<div id="temel" >
-<button type="button" id="yeniButon"> Yeniden Başlat </button>
-<div id="adam">
- <img src="img/adam1.jpg"> <img src="img/adam2.png"> <img src="img/adam3.jpg"> 
-<img src="img/adam4.png"> <img src="img/adam5.jpg">  <img src="img/adam6.png">  </div>
-<h3> Söylenen Harfler </h3>
-<div id="div_harfler"></div>    
-<div id="bulmaca"></div>
-<div id="sonuc"></div>
-    
-</body>
-    
+    <head>
+    <title>Adam-Asmaca</title>
+    <meta charset="utf-8"/>
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">    
+        <link rel="stylesheet" href="css/stil.css">
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/npm.js"></script>
+        <script src="js/adamas.js"></script>
+    </head>
+    <body onload="gizle()">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="text-center">Adam Asmaca Oyunu</h1>                 
+                </div>
+                <div class="col-md-12">
+                    <h4 class="text-center"> İşte Sorunuz</h4>
+                    <hr>
+                    <p class="text-info text-center" id="soru"></p>
+                </div>
+                <div class="col-md-12">
+                    <div class="thumbnail">
+                        <img id="res1" src="view/adam1.jpg" class="img-rounded" alt="Cinque Terre" width="400" height="250">
+                        <img id="res2" src="view/adam2.png" class="img-rounded" alt="Cinque Terre" width="400" height="250">
+                        <img id="res3" src="view/adam3.jpg" class="img-rounded" alt="Cinque Terre" width="400" height="250">
+                        <img id="res4" src="view/adam4.png" class="img-rounded" alt="Cinque Terre" width="400" height="250">
+                        <img id="res5" src="view/adam5.jpg" class="img-rounded" alt="Cinque Terre" width="400" height="250">
+                        <img id="res6" src="view/adam6.png" class="img-rounded" alt="Cinque Terre" width="400" height="250">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <p class="text-info text-center" id="bilmece" ></p>
+                </div>
+                <div class="col-md-12" id="alfabe">
+                    <button type="button" class="btn btn-primary btn-sm" id="a" onclick="kontrol(id)">A</button>
+                    <button type="button" class="btn btn-primary btn-sm" id="b" onclick="kontrol(id)">B</button>
+                    <button type="button" class="btn btn-primary btn-sm" id="c" onclick="kontrol(id)">C</button>
+                    <button type="button" class="btn btn-primary btn-sm" id="ç" onclick="kontrol(id)">Ç</button>
+                    <button type="button" class="btn btn-primary btn-sm" id="d" onclick="kontrol(id)">D</button>
+                    <button type="button" class="btn btn-primary btn-sm" id="e" onclick="kontrol(id)">E</button>
+                    <button type="button" class="btn btn-primary btn-sm" id="f" onclick="kontrol(id)">F</button>
+                    <button type="button" class="btn btn-primary btn-sm" id="g" onclick="kontrol(id)">H</button>
+                    <button type="button" class="btn btn-primary btn-sm" id="ğ" onclick="kontrol(id)">Ğ</button>
+                    <button type="button" class="btn btn-primary btn-sm" id="h" onclick="kontrol(id)">H</button>
+                    <button type="button" class="btn btn-primary btn-sm" id="ı" onclick="kontrol(id)">I</button>
+                    <button type="button" class="btn btn-primary btn-sm" id="i" onclick="kontrol(id)">İ</button>
+                    <button type="button" class="btn btn-primary btn-sm" id="j" onclick="kontrol(id)">J</button>
+                    <button type="button" class="btn btn-primary btn-sm" id="k" onclick="kontrol(id)">K</button>
+                    <button type="button" class="btn btn-primary btn-sm" id="l" onclick="kontrol(id)">L</button>
+                    <button type="button" class="btn btn-primary btn-sm" id="m" onclick="kontrol(id)">M</button>
+                    <button type="button" class="btn btn-primary btn-sm" id="n" onclick="kontrol(id)">N</button>
+                    <button type="button" class="btn btn-primary btn-sm" id="o" onclick="kontrol(id)">O</button>
+                    <button type="button" class="btn btn-primary btn-sm" id="ö" onclick="kontrol(id)">Ö</button>
+                    <button type="button" class="btn btn-primary btn-sm" id="p" onclick="kontrol(id)">P</button>
+                    <button type="button" class="btn btn-primary btn-sm" id="r" onclick="kontrol(id)">R</button>
+                    <button type="button" class="btn btn-primary btn-sm" id="s" onclick="kontrol(id)">S</button>
+                    <button type="button" class="btn btn-primary btn-sm" id="ş" onclick="kontrol(id)">Ş</button>
+                    <button type="button" class="btn btn-primary btn-sm" id="t" onclick="kontrol(id)">T</button>
+                    <button type="button" class="btn btn-primary btn-sm" id="u" onclick="kontrol(id)">U</button>
+                    <button type="button" class="btn btn-primary btn-sm" id="ü" onclick="kontrol(id)">Ü</button>
+                    <button type="button" class="btn btn-primary btn-sm" id="v" onclick="kontrol(id)">V</button>
+                    <button type="button" class="btn btn-primary btn-sm" id="y" onclick="kontrol(id)">Y</button>
+                    <button type="button" class="btn btn-primary btn-sm" id="z" onclick="kontrol(id)">Z</button>
+                </div>
+               &nbsp;
+               <div class="row">               
+                    <div class="col-md-6">
+                        <button type="button" class="btn btn-success btn-lg" onclick="window.location.reload(false)">Sıfırla</button>  
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" class="btn btn-success btn-lg" onclick="calis()"> Başlat </button>
+                    </div>
+               </div>
+               &nbsp;
+                <div class="col-md-12">                   
+                    <p id="bak" class="text-info text-center">                        
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
